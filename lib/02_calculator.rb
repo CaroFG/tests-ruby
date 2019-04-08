@@ -20,7 +20,19 @@ def power(i,n)
 	return i.to_f ** n.to_f
 end
 
+def factorial(a)
+	return Math.gamma(a+1)
+end
+
+
+# Nous avons réussi avec deux autres méhodes, mais on a trouvé plus simple :
 =begin
+def factorial(a)
+return 1 if a==0
+return a * factorial(a-1) 
+end
+
+=begin 
 def factorial(a)
 	i = 1
 	while a >= 1
@@ -30,10 +42,3 @@ def factorial(a)
 	return i
 end
 =end
-
-def factorial(a)
-return 1 if a==0
-return a * factorial(a-1) 
-end
-
-
